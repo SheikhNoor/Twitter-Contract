@@ -85,7 +85,7 @@ contract Twitter{
 
     function getLetestTOUser(address _user, uint count) public view returns(Tweet[] memory) {
         Tweet [] memory _tweets = new Tweet[] (count);//new memory array whoose length is count
-        //tweetsOf[_user] is haaving all the ids of the user
+        //tweetsOf[_user]; is having all the ids of the user
 
         uint[] memory ids = tweetsOf[_user];//ids is an array
        // tweets[ids];
