@@ -84,13 +84,21 @@ contract Twitter{
     }
 
     function getLetestTOUser(address _user, uint count) public view returns(Tweet[] memory) {
-        Tweet [] memory _tweets = new Tweet[] (count);
-        //tweetsOf[_user];
+        Tweet [] memory _tweets = new Tweet[] (count);//new memory array whoose length is count
+        //tweetsOf[_user] is haaving all the ids of the user
+
+        uint[] memory ids = tweetsOf[_user];//ids is an array
+       // tweets[ids];
         require(count > 0 && count <= nextId, "Count is not defined");
+
         uint j ;
         for (uint i = tweetsOf[_user].length-count; i< tweetsOf[_user].length ; i++){
-            Tweet storage _structure = tweets[i];
-            _tweets[j] = Tweet(_structure.id,_structure.author, _structure.content, _structure.createAt);
+            Tweet storage _structure = tweets[ids[i]];
+            _tweets[j] = Tweet(_structure.id,
+            _structure.author, 
+            _structure.content, 
+            _structure.createAt);
+
             j=j+1;
         }
         return _tweets;
