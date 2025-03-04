@@ -89,10 +89,10 @@ contract Twitter{
 
         uint[] memory ids = tweetsOf[_user];//ids is an array
        // tweets[ids];
-        require(count > 0 && count <= nextId, "Count is not defined");
+        require(count > 0 && count <= ids.length, "Count is not defined");
 
         uint j ;
-        for (uint i = tweetsOf[_user].length-count; i< tweetsOf[_user].length ; i++){
+        for (uint i = ids.length-count; i< ids.length ; i++){
             Tweet storage _structure = tweets[ids[i]];
             _tweets[j] = Tweet(_structure.id,
             _structure.author, 

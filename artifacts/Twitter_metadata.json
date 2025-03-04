@@ -423,11 +423,11 @@
 	},
 	"sources": {
 		"Twitter.sol": {
-			"keccak256": "0xe796c0deb4fe620cb6f054d9bc9589513a78ec92bb841fd4a9fafa7b677f0d94",
+			"keccak256": "0x72149b78822b23c4966ea80c50aa1d84bd10e25ffce4dd2d1b6f4856779f165b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f9a77188db432ae4be1fc4bc90ce46df98b535ca083cafab89969c904a928aad",
-				"dweb:/ipfs/QmcPCCjDnX6WFXzXXhSMLCnbcpT1NxijyVdWXZkiDMCYnF"
+				"bzz-raw://583f528eb1cc2d54f98823bd81fb1198005e8b30cc9789e21770cd48d9b94a8c",
+				"dweb:/ipfs/QmdbhAccKwZpABorKV4Zf9g4xLEjbJUe9hz2JGdEM3hyaT"
 			]
 		}
 	},
