@@ -8,9 +8,63 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "_sendMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "_tweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_operator",
+						"type": "address"
+					}
+				],
+				"name": "allow",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					},
 					{
 						"internalType": "uint256",
@@ -53,6 +107,32 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_operator",
+						"type": "address"
+					}
+				],
+				"name": "disallow",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_followed",
+						"type": "address"
+					}
+				],
+				"name": "follow",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -62,7 +142,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "followong",
+				"name": "following",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -71,6 +151,47 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "count",
+						"type": "uint256"
+					}
+				],
+				"name": "getLatestTweets",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "author",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createAt",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Twitter.Tweet[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -86,7 +207,7 @@
 						"type": "address"
 					}
 				],
-				"name": "opetators",
+				"name": "operators",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -95,6 +216,78 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "sendMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "sendMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "tweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "tweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -121,6 +314,11 @@
 						"internalType": "string",
 						"name": "content",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createAt",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -139,7 +337,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "tweetsOff",
+				"name": "tweetsOf",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -179,11 +377,11 @@
 	},
 	"sources": {
 		"Twitter.sol": {
-			"keccak256": "0x6cb896f6800ce616e33076856dfad4d63896e925e43e456c88e8acd5c1190c13",
+			"keccak256": "0x52d20798ca2cfbf73eb9238e9044b1ef9211a0a9266297179f2df395ae90250f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://314dc8dd6754665f36bf417f10dcb591f5a3be197fb3c7855b2eebbeaab73277",
-				"dweb:/ipfs/QmNZmj4NEbZ7hEdKMJy1Uzv2BD8k9sKFXMxdBwThhNgfCi"
+				"bzz-raw://08ebdaff089d368703779393df4562f75ff03bb3059f73fc7a571afde83ebaf0",
+				"dweb:/ipfs/QmYoBvoawjjFnk4naK8pbP8ptjU2eP5BEJJpy1NEUWDZ9m"
 			]
 		}
 	},
